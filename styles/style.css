@@ -9,9 +9,11 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-/*Стилизуем HEADER*/
+/*---Стилизуем HEADER---*/
+
 .header {
   position: relative;
   height: 100vh;
@@ -19,14 +21,17 @@
   max-height: 756px;
   /* выше установили ограничения для секции */
   display: flex;
-
+  background-color:  #f2f2f2;
+  z-index: -1;
+}
+.header__link {
+  text-decoration: none;
 }
 
 .logo_palce_header {
   position: absolute;
   top: 30px;
   left: 64px;
-
 }
 
 .header__title {
@@ -54,7 +59,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -2;
 }
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
@@ -64,7 +69,164 @@
   position: absolute;
   right: 0;
   top: 64px;
+  z-index: -3;
+}
+
+/*---Стилизуем MAIN---*/
+
+
+/*Стилизуем DESCRIPTION*/
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 100px auto 0px;
+}
+
+.two-columns__brief {
+  width: 175px;
+}
+
+.two-columns__brief_heading {
+  color:  #2f80ed;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.two-columns__paragraph:nth-of-type(2) {
+  margin: 30px 0;
+}
+
+/*Стилизуем DIGITS*/
+
+.table {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 100px;
+  width: 1100px;
+  flex-wrap: wrap;
+}
+
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__cell p span {
+  display: inline-block;
+  margin: 20px 0px auto;
+}
+
+.table h3 {
+  margin: 0px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text {
+  margin: 20px auto 0px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.section-title {
+  text-align: center;
+  width: 60%;
+  padding-top: 100px;
+  margin: auto;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  text-align: center;
+  width: 60%;
+  margin: 20px auto 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.section-title h2 {
+  margin: 0px;
+}
+
+.section-subtitle h2 {
+  margin-bottom: 0px;
+}
+
+/*Стилизуем FEYNMAN*/
+
+.feynman {
+  position: relative;
+  height: 890px;
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-position: bottom left;
+  background-size: 867px 637px;
+  background-repeat: no-repeat;
+}
+
+.feynman__title {
+  width: 648px;
+  text-align: center;
+  margin:auto;
+  padding-top: 100px;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+}
+
+.feynman__subtitle {
+  margin: 70px auto 0px;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link {
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/*Стилизуем KAUFMAN*/
+
+.kaufman {
+  background-color: #1f1f1f;
+  position: relative;
+  overflow: hidden;
   z-index: -2;
+}
+
+.table_theme_dark {
+  padding-bottom: 90px;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -75,7 +237,27 @@
   margin-top: 80px;
 }
 
-/*Стилизуем FOOTER*/
+.section-title_theme_dark {
+  color: #f2f2f2;
+  padding-top: 90px;
+}
+
+.section-subtitle_theme_dark{
+  color: #f2f2f2;
+
+}
+
+.kaufman__triangle {
+  position: absolute;
+  top: 0px;
+  right: -210px;
+  width: 877px;
+  height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  z-index: -1;
+}
+
+/*---Стилизуем FOOTER---*/
 ul{
   list-style-type: none;
 }
@@ -87,8 +269,8 @@ ul{
 .footer__columns {
   width: 90%;
   display: flex;
-  justify-content: space-around;
-  margin: 60px 0 40px;
+  justify-content: space-between;
+  margin: 60px auto 40px;
 }
 
 .footer__column-links {
@@ -134,5 +316,6 @@ ul{
   color: #f2f2f2;
   line-height: 30px;
   font-size: 18px;
+  margin: 0px;
 }
 
