@@ -1,0 +1,6 @@
+.footer {
+  background-color: hsl(0, 0%, 12%);
+  min-height: 350px;
+  display: flex;
+  align-self: stretch;
+}
