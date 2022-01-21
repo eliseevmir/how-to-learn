@@ -5,4 +5,6 @@
   position: absolute;
   right: 0;
   top: 64px;
+  animation: square_pic_rotation 20s linear infinite;
 }
+
