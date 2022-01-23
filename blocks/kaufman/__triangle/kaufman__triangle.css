@@ -7,4 +7,5 @@
   height: 877px;
   background-image: url(../../../images/kaufman-triangle.svg);
   z-index: -1;
+  animation: figure_rotation 20s infinite linear;
 }
